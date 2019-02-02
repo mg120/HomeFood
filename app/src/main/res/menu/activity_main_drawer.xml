@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/nav_categories"
+            android:icon="@drawable/ic_category"
+            android:title="@string/categories" />
+
+
+        <item
+            android:id="@+id/nav_messages"
+            android:icon="@drawable/ic_chat"
+            android:title="@string/messages" />
+
+
+        <item
+            android:id="@+id/nav_my_products"
+            android:icon="@drawable/product"
+            android:title="@string/my_products" />
+
+        <item
+            android:id="@+id/nav_my_coupons"
+            android:icon="@drawable/product"
+            android:title="@string/discount_coupons" />
+
+        <item
+            android:id="@+id/nav_my_orders"
+            android:icon="@drawable/order"
+            android:title="@string/orders" />
+
+        <item
+            android:id="@+id/nav_ordered_from_me"
+            android:icon="@drawable/from_me"
+            android:title="المطلوب" />
+
+        <item
+            android:id="@+id/nav_sreach"
+            android:icon="@drawable/ic_search"
+            android:title="البحث" />
+
+        <item
+            android:id="@+id/nav_nearBy"
+            android:icon="@drawable/ic_location"
+            android:title="أقرب مكان اليك" />
+
+        <item
+            android:id="@+id/add_product"
+            android:icon="@drawable/ic_add_meal"
+            android:title="اضافة اكلة" />
+
+        <item
+            android:id="@+id/share_app"
+            android:icon="@drawable/ic_share"
+            android:title="مشاركة التطبيق" />
+
+        <item
+            android:id="@+id/rate_app"
+            android:icon="@drawable/ic_rate"
+            android:title="تقييم التطبيق" />
+        <item
+            android:id="@+id/about_app"
+            android:icon="@drawable/about"
+            android:title="حول التطبيق" />
+
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_setttings"
+            android:title="اعدادات الحساب" />
+
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/contact"
+            android:icon="@drawable/ic_contact"
+            android:title="اتصل بالادارة" />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_rate"
+            android:title="تسجيل الخروج" />
+
+    </group>
+
+</menu>

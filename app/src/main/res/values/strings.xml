@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">HomeFood</string>
+
+    <!--For Main Navgation Menu-->
+    <string-array name="popup_list">
+        <item>اسم الطبخة</item>
+        <item>اسم الاسرة</item>
+        <item>اعلى سعر</item>
+        <item>اقل سعر</item>
+        <item>الاقرب اليك</item>
+        <item>أ - ى</item>
+        <item>ى - أ</item>
+    </string-array>
+
+    <string-array name="products_popup_list">
+        <item>اعلى سعر</item>
+        <item>اقل سعر</item>
+        <item>الاقرب اليك</item>
+        <item>أ - ى</item>
+        <item>ى - أ</item>
+    </string-array>
+
+    <string name="login">تسجيل الدخول</string>
+    <string name="new_signup">تسجيل جديد</string>
+    <string name="password">كلمة المرور</string>
+    <string name="email">البريد الالكترونى</string>
+    <string name="signUp">انشاء حساب جديد</string>
+    <string name="name">الأسم</string>
+    <string name="detect_loaction">حدد موقعك</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="sign">تسجيل</string>
+    <string name="have_account">لديك حساب ؟</string>
+    <string name="image">Image</string>
+    <string name="contact_us">اتصل بنا</string>
+    <string name="message_title">عنوان الرسالة</string>
+    <string name="message_txt">الرسالة</string>
+    <string name="send">إرسال</string>
+    <string name="add_meal">اضافة أكلة</string>
+    <string name="add_photos">اضف صور المنتج</string>
+    <string name="meal_type">نوع الاكلة</string>
+    <string name="meal_time">تحديد وقت التجهيز</string>
+    <string name="price">السعر</string>
+    <string name="meal_state">حالة التجهيز</string>
+    <string name="meal_description">وصف مختصر عن المنتج</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Approve_the">الموافقة على</string>
+    <string name="terms_and_coditions">الشروط والأحكام</string>
+    <string name="phone">رقم الهاتف</string>
+    <string name="enter_valid_email">برجاء ادخال بريد إلكترونى صحيح</string>
+    <string name="required">هذا الحقل مطلوب</string>
+    <string name="location_required">يجب تحديد موقعك اولا</string>
+    <string name="ok">موافق</string>
+    <string name="add_to_card">أضف للسلة</string>
+    <string name="rate_this_prod">تقييم المنتج</string>
+    <string name="add_your_comment">اضف تعليق</string>
+    <string name="publish">نشر</string>
+    <string name="comments">التعليقات</string>
+    <string name="product_Name">اسم المنتج</string>
+    <string name="prod_category">فئة المنتج</string>
+    <string name="description">الوصف</string>
+    <string name="home">الرئيسية</string>
+    <string name="profile">الملف الشخصى</string>
+    <string name="messages">الرسائل</string>
+    <string name="orders">طلباتى</string>
+    <string name="my_products">منتجاتى</string>
+    <string name="shopping_cart">عربة التسوق</string>
+    <string name="cart_empty">السلة فارغة</string>
+    <string name="total">الحساب الكلى</string>
+    <string name="el_emla">ريال</string>
+    <string name="order_now">تأكيد الطلب</string>
+    <string name="item_total_price">السعر :</string>
+    <string name="quantity">الكمية :</string>
+    <string name="item_delete">حذف</string>
+    <string name="item_details">التفاصيل</string>
+    <string name="edit">تعديل</string>
+    <string name="market">الماركت</string>
+    <string name="location">المكان</string>
+    <string name="no_available_data">لا توجد بيانات حالية</string>
+    <string name="time_out">الاتصال بالشبكة ضعيف حاول مرة أخرى</string>
+    <string name="server_error">خطأ فى الخادم</string>
+    <string name="no_connection">خطأ فى الاتصال بالشبكة</string>
+
+    <integer name="animation_duration_medium">1000</integer>
+    <string name="title_activity_maps">Map</string>
+    <string name="categories">الأقسام</string>
+    <string name="edit_meal">تعديل المنتج</string>
+    <string name="category">الصنف</string>
+    <string name="total_order">الاجمالى</string>
+    <string name="count">العدد</string>
+    <string name="order_num">رقم الطلب :</string>
+    <string name="order_date">تاريخ الطلب :</string>
+    <string name="show_order_detail">تفاصيل الطلب</string>
+    <string name="save">حفظ</string>
+    <string name="pass_not_equal">كلمتى المرور غير متطابقتين</string>
+    <string name="meal_details">تفاصيل الوجبة</string>
+    <string name="order">اطلب</string>
+    <string name="rates">التقييم</string>
+    <string name="your_comment_about_prod">اكتب تعليقك هنا</string>
+    <string name="Add">اضافة</string>
+    <string name="no_available_comments">لا توجد تعليقات حالية</string>
+    <string name="complete_order">استكمال البيانات</string>
+    <string name="your_comment">تقييم المنتج</string>
+    <string name="write_rate">تقييم المنتج</string>
+    <string name="signing">جارى الدخول</string>
+    <string name="signning">جارى التسجيل</string>
+    <string name="search_here">ابحث هنا ...</string>
+    <string name="settings_info">اعدادات الحساب</string>
+    <string name="title_activity_near_by_placses">Map</string>
+    <string name="item_quantity">الكمية</string>
+    <string name="order_trader">اسم التاجر:</string>
+    <string name="order_status">حالة الطلب :</string>
+    <string name="order_accepted">تم قبول طلبك</string>
+    <string name="order_complete">تم تجهيز طلبك</string>
+    <string name="order_in_way">طلبك فى الطريق</string>
+    <string name="order_rejected">تم رفض طلبك</string>
+    <string name="order_delivered">تم الإستلام</string>
+    <string name="received">تم الإستلام</string>
+    <string name="order_time">الوقت</string>
+    <string name="edit_photos">تعديل صور المنتج</string>
+    <string name="no_available_products">لا توجد منتجات حالية</string>
+    <string name="no_deals">لا توجد معاملات سابقة</string>
+    <string name="restore_password">إعادة ضبط كلمة المرور</string>
+    <string name="enter_your_email">أدخل البريد الالكترونى الخاص بك</string>
+    <string name="forgetpassword">نسيت كلمة المرور ؟</string>
+    <string name="discount_coupons">كوبونات الخصم</string>
+    <string name="create_coupon">إنشاء كوبون خصم</string>
+    <string name="discount_val">نسبة الخصم</string>
+    <string name="or">أو</string>
+    <string name="currency">ريال</string>
+    <string name="decide_finished_time">تحديدنهاية الخصم</string>
+    <string name="create">إنشاء</string>
+    <string name="code">الكود :</string>
+    <string name="discount_value">قيمة الخصم :</string>
+    <string name="finished_date">نهاية الخصم :</string>
+    <string name="percent">%</string>
+    <string name="real_sau">ريال</string>
+    <string name="select_discount_items">برجاء تحديد المنتجات لتطبيق عليها الخصم</string>
+    <string name="have_acoupon">هل لديك كوبون خصم</string>
+    <string name="enter_your_coupon">ادخل كود الكوبون</string>
+    <string name="exit">تخطى</string>
+    <string name="no_available_coupons">لا توجد كوبونات حالية</string>
+    <string name="until">الخصم سارى حتى :</string>
+
+</resources>

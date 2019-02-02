@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d70005</color>
+    <color name="colorPrimaryDark">#d70005</color>
+    <!--<color name="colorPrimaryDark">#00574B</color>-->
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="white_red">#EF8781</color>
+    <color name="gray_color">#afaeae</color>
+
+    <color name="refresh_progress_1">#FF0266</color>
+    <color name="refresh_progress_2">#0336ff</color>
+    <color name="refresh_progress_3">#FFDE03</color>
+
+    <color name="item1_bg">#ED3851</color>
+    <color name="item2_bg">#E1A64C</color>
+    <color name="item3_bg">#0AB29B</color>
+    <color name="item4_bg">#4A9FC4</color>
+    <color name="item5_bg">#B9C14A</color>
+    <color name="item6_bg">#77868D</color>
+    <color name="item7_bg">#D95E3C</color>
+
+    <color name="colorGreen">#8bc543</color>
+
+    <color name="duskYellow">#ffd700</color>
+    <color name="lightGrey">#e9c963</color>
+
+    <color name="colorDivider">#ebebeb</color>
+    <color name="colorOtherUserBackground">#efefef</color>
+</resources>

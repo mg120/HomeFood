@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "693223638940",
+    "firebase_url": "https://homfood-9b13f.firebaseio.com",
+    "project_id": "homfood-9b13f",
+    "storage_bucket": "homfood-9b13f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693223638940:android:fefa16a2b2511c9e",
+        "android_client_info": {
+          "package_name": "com.homFood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693223638940-muetliiiib0a6evh8610c9qus4v19sju.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.homFood",
+            "certificate_hash": "be87ffc17c30c02451e6bcdf8fa52fc049591189"
+          }
+        },
+        {
+          "client_id": "693223638940-ipru1sahesohu5b6j1r0mrrc8k06amrj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAljjAezVjSSrAvdmGL5p92IVOmqGg-Nu0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693223638940-ipru1sahesohu5b6j1r0mrrc8k06amrj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
