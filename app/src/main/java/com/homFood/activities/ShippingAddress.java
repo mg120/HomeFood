@@ -138,22 +138,7 @@ public class ShippingAddress extends AppCompatActivity {
                     return;
                 }
 
-//                Intent intent = new Intent(ShippingAddress.this, CheckCoupon.class);
-//                Bundle bundle = new Bundle();
-//                bundle.putString("name", name);
-//                bundle.putString("email", email);
-//                bundle.putString("country", country);
-//                bundle.putString("address", address);
-//                bundle.putString("city", city);
-//                bundle.putString("zone", zone);
-//                bundle.putString("phone", phone);
-//                bundle.putDouble("lat", latitude);
-//                bundle.putDouble("lan", longtitude);
-//                bundle.putParcelableArrayList("card_list", (ArrayList<? extends Parcelable>) CardAdapter.cart_list);
-//                intent.putExtras(bundle);
-//                startActivity(intent);
-
-                Intent intent = new Intent(ShippingAddress.this, CheckOut.class);
+                Intent intent = new Intent(ShippingAddress.this, CheckCoupon.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("name", name);
                 bundle.putString("email", email);
@@ -167,6 +152,21 @@ public class ShippingAddress extends AppCompatActivity {
                 bundle.putParcelableArrayList("card_list", (ArrayList<? extends Parcelable>) CardAdapter.cart_list);
                 intent.putExtras(bundle);
                 startActivity(intent);
+
+//                Intent intent = new Intent(ShippingAddress.this, CheckOut.class);
+//                Bundle bundle = new Bundle();
+//                bundle.putString("name", name);
+//                bundle.putString("email", email);
+//                bundle.putString("country", country);
+//                bundle.putString("address", address);
+//                bundle.putString("city", city);
+//                bundle.putString("zone", zone);
+//                bundle.putString("phone", phone);
+//                bundle.putDouble("lat", latitude);
+//                bundle.putDouble("lan", longtitude);
+//                bundle.putParcelableArrayList("card_list", (ArrayList<? extends Parcelable>) CardAdapter.cart_list);
+//                intent.putExtras(bundle);
+//                startActivity(intent);
                 finish();
             }
         });

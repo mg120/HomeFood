@@ -48,8 +48,10 @@ public class CheckOut extends AppCompatActivity {
     String newDataArray;
     String sellerIdData;
 
+    String address, dis_value, dis_prod_id;
+    double lat, lan;
+    ArrayList<CardModel> list;
     ArrayList<FatoraModel> fatoraModels = new ArrayList<>();
-    private ArrayList<CheckoutModel> list = new ArrayList<>();
 
     private ArrayList<String> seller_id_list = new ArrayList<>();
 
@@ -58,11 +60,19 @@ public class CheckOut extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_out);
 
-        Intent intent = getIntent();
-        final String address = intent.getStringExtra("address");
-        final double lat = intent.getDoubleExtra("lat", 0.0);
-        final double lan = intent.getDoubleExtra("lan", 0.0);
-        final ArrayList<CardModel> list = intent.getExtras().getParcelableArrayList("card_list");
+        if (getIntent().getExtras().getString("dis_value") != null) {
+            dis_value = getIntent().getStringExtra("dis_value");
+            dis_prod_id = getIntent().getStringExtra("dis_prod_id");
+            address = getIntent().getStringExtra("address");
+            lat = getIntent().getDoubleExtra("lat", 0.0);
+            lan = getIntent().getDoubleExtra("lan", 0.0);
+            list = getIntent().getExtras().getParcelableArrayList("card_list");
+        } else {
+            address = getIntent().getStringExtra("address");
+            lat = getIntent().getDoubleExtra("lat", 0.0);
+            lan = getIntent().getDoubleExtra("lan", 0.0);
+            list = getIntent().getExtras().getParcelableArrayList("card_list");
+        }
 
         user_location = findViewById(R.id.checkout_address_txtv);
         sure_add_order = findViewById(R.id.checkout_confirm_order);
@@ -81,9 +91,25 @@ public class CheckOut extends AppCompatActivity {
 
         adapter = new CheckOutListAdapter(CheckOut.this, list);
         listView.setAdapter(adapter);
-        for (int x = 0; x < list.size(); x++) {
-            total += Float.parseFloat(list.get(x).getOrder_pro_price()) * Integer.parseInt(list.get(x).getOrder_pro_quantity());
-            total_Quantity += Integer.parseInt(list.get(x).getOrder_pro_quantity());
+        if (dis_value != null) {
+            for (int x = 0; x < list.size(); x++) {
+                if (list.get(x).getOrder_pro_id().equals(dis_prod_id)) {
+                    if (dis_value.toLowerCase().contains("ريال")) {
+                        String dis = dis_value.replace("ريال", "");
+                        list.get(x).setOrder_pro_price(String.valueOf(Integer.parseInt(list.get(x).getOrder_pro_price()) - Integer.parseInt(dis)));
+                    } else {
+                        String dis = dis_value.replace("%", "");
+                        list.get(x).setOrder_pro_price(String.valueOf(Integer.parseInt(list.get(x).getOrder_pro_price()) * (Integer.parseInt(dis) / 100)));
+                    }
+                }
+                total += Float.parseFloat(list.get(x).getOrder_pro_price()) * Integer.parseInt(list.get(x).getOrder_pro_quantity());
+                total_Quantity += Integer.parseInt(list.get(x).getOrder_pro_quantity());
+            }
+        } else {
+            for (int x = 0; x < list.size(); x++) {
+                total += Float.parseFloat(list.get(x).getOrder_pro_price()) * Integer.parseInt(list.get(x).getOrder_pro_quantity());
+                total_Quantity += Integer.parseInt(list.get(x).getOrder_pro_quantity());
+            }
         }
         total_txtV.setText(total + "");
 

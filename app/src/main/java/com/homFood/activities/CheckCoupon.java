@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +18,7 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
 import com.homFood.R;
 import com.homFood.adapter.CardAdapter;
 import com.homFood.model.CardModel;
@@ -36,8 +38,10 @@ public class CheckCoupon extends AppCompatActivity implements View.OnClickListen
     EditText coupon_code_ed;
     Button send_code, exit_page;
 
-    String address, name, email;
+    String address, name, email, date, code;
     double lat, lan;
+    int total_quantity;
+    float total_price;
     ArrayList<CardModel> list;
 
     @Override
@@ -46,15 +50,21 @@ public class CheckCoupon extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_check_coupon);
 
         if (getIntent().getExtras() != null) {
-            address = getIntent().getStringExtra("address");
-            name = getIntent().getStringExtra("name");
-            email = getIntent().getStringExtra("email");
-            lat = getIntent().getDoubleExtra("lat", 0.0);
-            lan = getIntent().getDoubleExtra("lan", 0.0);
-            list = getIntent().getExtras().getParcelableArrayList("card_list");
+            Intent intent = getIntent();
+            address = intent.getStringExtra("address");
+            lat = intent.getDoubleExtra("lat", 0.0);
+            lan = intent.getDoubleExtra("lan", 0.0);
+            list = intent.getExtras().getParcelableArrayList("card_list");
 
             System.out.println("list:: " + list);
-            Toast.makeText(this, lat + "", Toast.LENGTH_SHORT).show();
+
+            Gson gson = new Gson();
+            String listtt = gson.toJson(list);
+
+            Log.d("address: ", address + "");
+            Log.d("lat: ", lat + "");
+            Log.d("lan: ", lan + "");
+            Log.d("list:: ", listtt);
         }
         coupon_code_ed = findViewById(R.id.coupon_code_ed_id);
         send_code = findViewById(R.id.send_coupon_code_btn_id);
@@ -97,7 +107,7 @@ public class CheckCoupon extends AppCompatActivity implements View.OnClickListen
                                 Toasty.success(CheckCoupon.this, "تم إرسال الكود بنجاح!", 1500).show();
                                 finish();
                             } else {
-                                Toasty.error(CheckCoupon.this, "برجاء التحقق من الكود المرسل!", 1500).show();
+                                Toasty.error(CheckCoupon.this, "هذا الكود غير موجود ,برجاء التحقق من الكود المرسل!", 1500).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -128,8 +138,16 @@ public class CheckCoupon extends AppCompatActivity implements View.OnClickListen
                 break;
 
             case R.id.exit_btn_id:
-//                Intent intent = new Intent(this, );
-//                startActivity(intent);
+                Intent intent = new Intent(CheckCoupon.this, CheckOut.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("name", name);
+                bundle.putString("email", email);
+                bundle.putString("address", address);
+                bundle.putDouble("lat", lat);
+                bundle.putDouble("lan", lan);
+                bundle.putParcelableArrayList("card_list", (ArrayList<? extends Parcelable>) CardAdapter.cart_list);
+                intent.putExtras(bundle);
+                startActivity(intent);
                 finish();
                 break;
         }
